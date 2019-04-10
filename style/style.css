@@ -1,0 +1,259 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Jua');
+
+*{margin:0; padding:0;}
+
+body{
+  background: url() center no-repeat ;
+  background-size:cover;
+  width:100%;
+  height: 100vh;
+  color:#fff;
+  font-family: 'Jua', sans-serif;
+}
+.loading{
+  font-size: 34px;
+  color:#000;
+  text-align: center;
+  width:100%;
+  height: 100vh;
+  z-index: 9959;
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  animation: loading 2s alternate infinite;
+}
+@keyframes loading{
+  0%{
+    color:#000;
+  }
+  100%{
+    color:#fff;
+    background: #111;
+  }
+}
+.contentWrap{
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  width:100%;
+  height:100vh;
+}
+
+.content{
+  padding:1.5rem 8rem 4rem;
+  border-radius:0.3rem;
+  box-shadow: 0px 3px 6px #111 , 0px 3px 6px #111;
+  background: rgba(0,0,0,0.3);
+  transition: all .4s ease-out;
+}
+.clockBox{
+  white-space: nowrap;
+  font-size:8rem;
+  text-align:center;
+  transition: all .4s ease-out;
+}
+.weatherBox{
+  text-align:center;
+}
+.userBox{
+  white-space: nowrap;
+  text-align: center;
+  font-size:3rem;
+  padding:1rem;
+  transition: all .4s ease-out;
+}
+
+.idForm{
+  display:block;
+  text-align: center;
+  padding: 2rem;
+  transition: all .4s ease-out;
+}
+.idInput{
+  padding: 0.2rem;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #fff;
+  text-align: center;
+  color:#fff;
+}
+
+input::placeholder {
+  color:#fff;
+  font-size:0.8rem;
+  line-height: 0.8rem;
+}
+
+.memoForm{
+  text-align: center;
+  padding: 2rem;
+}
+
+.memoButton{
+  background:#fff;
+  border-radius:0.2rem;
+  box-shadow: 0px 1px 2px #000 , 0px 1px 2px #000;
+  border:none;
+  color:#000;
+  cursor: pointer;
+  padding: 2rem;
+  transition: all .4s ease-out;
+}
+.memoButton:hover{
+  background:lightgoldenrodyellow
+}
+.memoButton:active{
+  transform: translateY(2px);
+}
+
+.memoInput{
+  padding: 1rem 4rem;
+  display:none;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #fff;
+  text-align: center;
+  color:#fff;
+  transition: all .2s ease-in
+}
+
+.memoInput:hover{
+  border-bottom: 2px solid lightgreen;
+}
+
+.memoInput:active{
+  transform: translateY(3px)
+}
+
+.memoListBox{
+  padding: 0 3rem;
+}
+
+.showing{
+  display:block;
+}
+
+@media (max-width: 720px) {
+  .content{
+    padding:1.5rem 5rem 2rem ;
+    border-radius:0.3rem;
+    box-shadow: 0px 3px 6px #111 , 0px 3px 6px #111;
+    background: rgba(0,0,0,0.3);
+  }
+  .clockBox{
+    font-size:5rem;
+  }
+  .weatherBox{
+    text-align:center;
+  }
+  .userBox{
+    font-size:2rem;
+  }
+  
+  .idForm{
+    display:block;
+    text-align: center;
+    padding: 2rem;
+  }
+  .idInput{
+    padding: 0.2rem;
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    color:#fff;
+  }
+  
+  input::placeholder {
+    color:#fff;
+    font-size:1rem;
+  }
+  
+  .memoForm{
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .memoButton{
+    background:#fff;
+    border-radius:0.2rem;
+    box-shadow: 0px 1px 2px #000 , 0px 1px 2px #000;
+    border:none;
+    color:#000;
+    cursor: pointer;
+    padding: 2rem;
+    transition: all .4s ease-out;
+  }
+  .memoButton:hover{
+    background:lightgoldenrodyellow
+  }
+  .memoButton:active{
+    transform: translateY(2px);
+  }
+  
+  .memoInput{
+    padding: 0 1rem;
+    display:none;
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    color:#fff;
+    transition: all .2s ease-in
+  }
+  
+  .memoInput:hover{
+    border-bottom: 2px solid lightgreen;
+  }
+  
+  .memoInput:active{
+    transform: translateY(3px)
+  }
+  
+  .memoListBox{
+    padding: 0 3rem;
+  }
+}
+
+
+/* ---- ie css ---- */
+.ie{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  background:#fff;
+  z-index:9949;
+  text-align: center;
+  padding-top:40px;
+  color:#000;
+}
+.ie10{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.4);
+  z-index:9949;
+  text-align: center;
+  padding-top:40px;
+  display:none;
+}
