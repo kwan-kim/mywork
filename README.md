@@ -12,4 +12,4 @@
 + 업데이트 : 로딩중기능 생성
 
 ### 링크
-[DEMO SITE](https://kimkwanjs.github.io/mr/)
+[DEMO SITE](https://kwan-kim.github.io/mywork/)
